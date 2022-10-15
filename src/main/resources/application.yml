@@ -1,0 +1,18 @@
+nasa:
+  api:
+    key: DEMO_KEY
+    url: https://api.nasa.gov
+
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        default-requeue-rejected: false
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 5000
